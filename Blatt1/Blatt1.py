@@ -53,14 +53,67 @@ def aufg2():
 	for i in range(0,len(x)):
 		x[i] = x[i]*10**(-i-1)
 		
-	plt.plot(x, f(x))
+	plt.semilogx(x, f(x), 'ro', label='Numerische Werte')
+	plt.axhline(-1/6, label='Grenzwert bei -1/6')
+	plt.legend()
+	plt.ylim(-0.5, 0.1)
 	plt.savefig('aufg2.pdf')
 	plt.clf()
 	
-
-
-
+	print(x)
+	print("Der empirische Grenzwert ist -1/6")
+	print("Der numerische Grenzwert i")
+	
+def aufg3():
+	def f(x):
+		y = (x**3+1/3)-(x**3-1/3)
+		return y
+		
+	def g(x):
+		y = ((3+x**3)-(3-x**3))/x**3
+		return(y)
+		
+	f_analytisch = 2/3
+	g_analytisch = 2
+	
+	x = np.linspace(-5*10**4, 5*10**4, 1000)
+	x_g = np.linspace(-0.00005, 0.00005, 1000)
+	
+	plt.plot(x, np.absolute((f(x)-f_analytisch)/2*3), 'ko', label='Abweichung')
+	plt.axhline(0.01)
+	plt.legend(loc='best')
+	#plt.ylim(0,0.15)
+	plt.savefig('aufg3_f.pdf')
+	plt.clf()
+	
+	plt.plot(x_g, np.absolute((g(x_g)-g_analytisch)/2), 'ko', label='Abweichung')
+	plt.axhline(0.01)
+	plt.legend(loc='best')
+	plt.ylim(0,0.15)
+	plt.savefig('aufg3_g.pdf')
+	plt.clf()
+	
+	x_f_2 = np.linspace(-10**6, 10**6, 1000)
+	plt.plot(x_f_2, f(x_f_2), 'ko', label='Funktionswert')
+	#plt.axhline(0)
+	plt.legend(loc='best')
+	#plt.ylim(-0.15,0.15)
+	plt.savefig('aufg3_f_0.pdf')
+	plt.clf()
+	
+	
+	x_g_2 = np.linspace(-0.00002, 0.00002, 1000)
+	plt.plot(x_g_2, g(x_g_2), 'ko', label='Funktionswert')
+	plt.axhline(0)
+	plt.legend(loc='best')
+	plt.ylim(-0.1, 4)
+	plt.xlim(-0.00002, 0.00002)
+	plt.savefig('aufg3_g_0.pdf')
+	plt.clf()
+	
+	
 if __name__  == "__main__":
 
 	aufg1()
 	aufg2()
+	aufg3()
