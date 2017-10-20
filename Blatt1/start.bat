@@ -1,0 +1,1 @@
+python Blatt1.py
