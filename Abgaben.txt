@@ -1,6 +1,0 @@
- Abgaben als Zip
-Alles nachvollziehbar
-Vernünftiger Style (Linter)
-pdf mit ergebnissen
-if __name__ = "__main__": Konstrukt verwenden, Funktionen für aufgabenteile
-Keine Schleifen über arrays in numpy
