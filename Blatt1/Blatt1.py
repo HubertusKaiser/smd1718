@@ -114,27 +114,35 @@ def aufg3():
     plt.savefig('aufg3_g_0.pdf')
     plt.clf()
 
+
 def aufg4():
-	#Definition der Größen der Funktion
-	#wq = Wirkungsquerschnitts
-	#fwq = Funktion des Wirkungsquerschnitts
-	#alpha= Feinstrukturkonstante
-	alpha= 1/137
-	#Ee = Energie des Elektron [Ee]=MeV
-	Ee=50
-	#Masse des Elektron [me]=MeV
-	me=0.000511
-	#ß beta
-	ß=np.sqrt(1-me/Ee)
+    alpha = 1/137
+    Ee = 50
+    s = (2 * Ee)**2
+    me = 0.000511
+    beta = np.sqrt(1-me/Ee)
+    gamma = Ee / me
 
-	def fwq(th):
-		wq = ((alpha)**2 / Ee) * (2+ (np.sin(th)**2))/(1-ß**2 *np.cos(th)**2)
-		return wq
-	th=np.linspace(0,np.pi, 100000)
-	plt.plot(th, fwq(th))
-    plt.ylim(0,0.01)
-    plt.savefig("aufg4(schlecht_konditioniert).pdf")
+    def fwq_naiv(th):
+        wq = (((alpha)**2 / s) * (2 + (np.sin(th)**2)) /
+              (1 - beta**2 * np.cos(th)**2))
+        return wq
 
+    def fwq_stabil(th):
+        wq = (((alpha)**2 / s) * (2 + (np.sin(th)**2)) /
+              (1 / gamma**2 + beta**2 * np.sin(th)**2))
+        return wq
+
+    def kondition():
+        y = 1
+        return y
+
+    th = np.linspace(-np.pi/10, np.pi/10, 100000)
+    plt.plot(th, fwq_naiv(th), label='naiv')
+    plt.plot(th, fwq_stabil(th), label='partial')
+    plt.ylim(0, 0.0015)
+    plt.legend()
+    plt.savefig("aufg4.pdf")
 
 
 if __name__ == "__main__":
