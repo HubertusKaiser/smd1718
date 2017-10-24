@@ -114,8 +114,31 @@ def aufg3():
     plt.savefig('aufg3_g_0.pdf')
     plt.clf()
 
+def aufg4():
+	#Definition der Größen der Funktion
+	#wq = Wirkungsquerschnitts
+	#fwq = Funktion des Wirkungsquerschnitts
+	#alpha= Feinstrukturkonstante
+	alpha= 1/137
+	#Ee = Energie des Elektron [Ee]=MeV
+	Ee=50
+	#Masse des Elektron [me]=MeV
+	me=0.000511
+	#ß beta
+	ß=np.sqrt(1-me/Ee)
+
+	def fwq(th):
+		wq = ((alpha)**2 / Ee) * (2+ (np.sin(th)**2))/(1-ß**2 *np.cos(th)**2)
+		return wq
+	th=np.linspace(0,np.pi, 100000)
+	plt.plot(th, fwq(th))
+    plt.ylim(0,0.01)
+    plt.savefig("aufg4(schlecht_konditioniert).pdf")
+
+
 
 if __name__ == "__main__":
     aufg1()
     aufg2()
     aufg3()
+    aufg4()
