@@ -1,0 +1,130 @@
+\input{header.tex}
+
+\title{SMD Übungsblatt2 - Barth, Kaiser, Nickel}
+
+\begin{document}
+
+\section{Aufgabe 9}
+\subsection{a)}
+Für a werden ganzzahlige Werte von 1 bis 20 genutzt.
+Dabei zeigt sich, dass die Periodenlänge maximal wird für 
+a-1 teilbar durch 2 und 4. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{nr8_a.pdf}
+  \caption{Peridenlänge für b=3, m=1024}
+  % \label{fig:501200}
+\end{figure}
+
+
+\subsection{b)}
+Ok, wird gemacht :)
+
+\subsection{c)}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{nr8_c_seed=0.0.pdf}
+  \caption{Histogramm für seed = 0.0}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{nr8_c_seed=0.1.pdf}
+  \caption{Histogramm für seed = 0.1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{nr8_c_seed=0.2.pdf}
+  \caption{Histogramm für seed = 0.2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{nr8_c_seed=0.3.pdf}
+  \caption{Histogramm für seed = 0.3}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{nr8_c_seed=0.4.pdf}
+  \caption{Histogramm für seed = 0.4}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{nr8_c_seed=0.5.pdf}
+  \caption{Histogramm für seed = 0.5}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{nr8_c_seed=0.6.pdf}
+  \caption{Histogramm für seed = 0.6}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{nr8_c_seed=0.7.pdf}
+  \caption{Histogramm für seed = 0.7}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{nr8_c_seed=0.8.pdf}
+  \caption{Histogramm für seed = 0.8}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{nr8_c_seed=0.9.pdf}
+  \caption{Histogramm für seed = 0.9}
+\end{figure}
+
+\subsection{d)}
+Exemplarisch für Anfangswert/Seed = 0.2:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{nr8_d_2D_seed=0.2.pdf}
+  \caption{2D Histogramm mit konstruiertem RNG}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{nr8_d_3D_seed=0.2.pdf}
+  \caption{3D Histogramm mit konstruiertem RNG}
+\end{figure}
+
+\subsection{e)}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{nr8_d_npuni_2D_seed=0.2.pdf}
+  \caption{2D Histogramm mit numpy.random.uniform()}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{nr8_d_npuni_3D_seed=0.2.pdf}
+  \caption{3D Histogramm mit numpy.random.uniform()}
+\end{figure}
+
+\subsection{f)}
+
+1/2 findet sich abhängig vom Seed 16mal oder 0mal
+in den 10000 generierten Zufallszahlen.
+In den vorherigen Aufgaben hatte sich gezeigt, dass 
+die Periodenlänge mit diesen Parametern 625 beträgt.
+Daher wird jede generierte Zahl in den 10000
+Werten 16mal zu finden sein (625*16=10000).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{nr8_f.pdf}
+  \caption{Anzahl der 1/2 in 10000 Zufallszahlen}
+\end{figure}
+
+\end{document}
+

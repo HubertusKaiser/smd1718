@@ -50,17 +50,14 @@ def aufg9():
     plt.ylabel('Periodenlänge')
     plt.savefig('nr8_a.pdf')
     plt.clf()
+    print(length)
+    print(a_test)
 
     # Teilaufgabe c
     seeds = np.arange(10)/10
     for x0 in seeds:
-        random, pl = linrandom(1601, 3456, 10000, x0, 10000, pl=True)
+        random, pl = linrandom(1601, 3456, 10000, x0, 10000, pl=False)
         print('seed = ' + str(x0))
-        a = 0
-        for x in random:  #Teilaufgabef
-            if x ==0.5:
-                a = a+1
-        print('Anzahl 1/2:' + str(a))
         plt.hist(random, bins=50)
         plt.savefig('nr8_c_seed='+str(x0)+'.pdf')
         plt.clf()
@@ -100,6 +97,17 @@ def aufg9():
 
     # Teilaufgabe f
 
+    seeds = np.arange(0,100)/100
+    for x0 in seeds:
+        random, pl = linrandom(1601, 3456, 10000, x0, 10000, pl=False)
+        msk = [(y == 0.5) for y in random]
+        find = [z for z in msk if z == True]
+        plt.plot(x0, len(find), 'kx', markersize = 5)
+    plt.xlabel('Startwert')
+    plt.ylabel('Anzahl der 1/2')
+    plt.savefig('nr8_f.pdf')    
+    plt.clf()
+        #print(pl)
     
         
 aufg9()
