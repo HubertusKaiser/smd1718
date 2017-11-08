@@ -50,21 +50,14 @@ def aufg9():
     plt.ylabel('Periodenlänge')
     plt.savefig('nr8_a.pdf')
     plt.clf()
-    print(length)
-    print(a_test)
 
     # Teilaufgabe c
     seeds = np.arange(10)/10
     for x0 in seeds:
         random, pl = linrandom(1601, 3456, 10000, x0, 10000, pl=False)
-        print('seed = ' + str(x0))
-        plt.hist(random, bins=50)
+        plt.hist(random, bins=20)
         plt.savefig('nr8_c_seed='+str(x0)+'.pdf')
         plt.clf()
-        #print(pl)
-    print('8c:')
-    print('Nein? PL immer 625 ->')
-    print('Generiert nur 625/10000 Zahlen für jeden Seed')
 
     # Teilaufgabe d
     # 2D
@@ -73,21 +66,18 @@ def aufg9():
     random_0 = [random[x] for x in range(10000) if x % 2 == 0]
     random_1 = [random[x] for x in range(10000) if x % 2 == 1]
     scatter_2d(random_0, random_1, 'nr8_d_2D_seed=' + str(0.2))
-    
-    
+
     # 3D
     random_0 = [random[x] for x in range(10000) if x % 3 == 0]
     random_1 = [random[x] for x in range(10000) if x % 3 == 1]
     random_2 = [random[x] for x in range(10000) if x % 3 == 2]
     random_0.pop()
     scatter_3d(random_0, random_1, random_2, 'nr8_d_3D_seed='+str(0.2))
-     
-     
+
     random_0 = [random_numpy[x] for x in range(10000) if x % 2 == 0]
     random_1 = [random_numpy[x] for x in range(10000) if x % 2 == 1]
     scatter_2d(random_0, random_1, 'nr8_d_npuni_2D_seed=' + str(0.2))
-    
-    
+
     # 3D
     random_0 = [random_numpy[x] for x in range(10000) if x % 3 == 0]
     random_1 = [random_numpy[x] for x in range(10000) if x % 3 == 1]
@@ -97,18 +87,16 @@ def aufg9():
 
     # Teilaufgabe f
 
-    seeds = np.arange(0,100)/100
+    seeds = np.arange(0, 100)/100
     for x0 in seeds:
         random, pl = linrandom(1601, 3456, 10000, x0, 10000, pl=False)
         msk = [(y == 0.5) for y in random]
-        find = [z for z in msk if z == True]
-        plt.plot(x0, len(find), 'kx', markersize = 5)
+        find = [z for z in msk if z is True]
+        plt.plot(x0, len(find), 'kx', markersize=5)
     plt.xlabel('Startwert')
     plt.ylabel('Anzahl der 1/2')
-    plt.savefig('nr8_f.pdf')    
+    plt.savefig('nr8_f.pdf')
     plt.clf()
-        #print(pl)
-    
-        
-aufg9()
 
+
+aufg9()

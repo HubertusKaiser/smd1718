@@ -1,4 +1,4 @@
-This is LuaTeX, Version 0.95.0 (TeX Live 2016/W32TeX)  (format=lualatex 2017.5.13)  7 NOV 2017 15:02
+This is LuaTeX, Version 0.95.0 (TeX Live 2016/W32TeX)  (format=lualatex 2017.5.13)  7 NOV 2017 21:13
  restricted system commands enabled.
 **Blatt2.tex
 (./Blatt2.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.205 seconds
+luaotfload | main : initialization completed in 0.201 seconds
 Babel <3.9r> and hyphenation patterns for 1 language(s) loaded.
 (./header.tex (c:/texlive/2016/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2017/01/03 v3.22 KOMA-Script document class (article)
@@ -2248,116 +2248,117 @@ Package luatex.def Info: nr8_a.pdf used on input line 15.
 <nr8_c_seed=0.0.pdf, id=5, 462.52798pt x 346.89601pt>
 File: nr8_c_seed=0.0.pdf Graphic file (type pdf)
  <use nr8_c_seed=0.0.pdf>
-Package luatex.def Info: nr8_c_seed=0.0.pdf used on input line 27.
+Package luatex.def Info: nr8_c_seed=0.0.pdf used on input line 35.
 (luatex.def)             Requested size: 334.60571pt x 250.96649pt.
 
 [1
 
 {c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}<./nr8_a.pdf>]
-<nr8_c_seed=0.1.pdf, id=53, 462.52798pt x 346.89601pt>
+<nr8_c_seed=0.1.pdf, id=54, 462.52798pt x 346.89601pt>
 File: nr8_c_seed=0.1.pdf Graphic file (type pdf)
 
 <use nr8_c_seed=0.1.pdf>
-Package luatex.def Info: nr8_c_seed=0.1.pdf used on input line 33.
+Package luatex.def Info: nr8_c_seed=0.1.pdf used on input line 41.
 (luatex.def)             Requested size: 334.60571pt x 250.96649pt.
- [2<./nr8_c_seed=0.0.pdf>]
-<nr8_c_seed=0.2.pdf, id=80, 462.52798pt x 346.89601pt>
+
+<nr8_c_seed=0.2.pdf, id=55, 462.52798pt x 346.89601pt>
 File: nr8_c_seed=0.2.pdf Graphic file (type pdf)
 
 <use nr8_c_seed=0.2.pdf>
-Package luatex.def Info: nr8_c_seed=0.2.pdf used on input line 39.
+Package luatex.def Info: nr8_c_seed=0.2.pdf used on input line 47.
 (luatex.def)             Requested size: 334.60571pt x 250.96649pt.
-
-<nr8_c_seed=0.3.pdf, id=81, 462.52798pt x 346.89601pt>
+ [2<./nr8_c_seed=0.0.pdf><./nr8_c_seed=0.1.pdf>]
+<nr8_c_seed=0.3.pdf, id=102, 462.52798pt x 346.89601pt>
 File: nr8_c_seed=0.3.pdf Graphic file (type pdf)
 
 <use nr8_c_seed=0.3.pdf>
-Package luatex.def Info: nr8_c_seed=0.3.pdf used on input line 45.
+Package luatex.def Info: nr8_c_seed=0.3.pdf used on input line 53.
 (luatex.def)             Requested size: 334.60571pt x 250.96649pt.
- [3<./nr8_c_seed=0.1.pdf><./nr8_c_seed=0.2.pdf>]
-<nr8_c_seed=0.4.pdf, id=128, 462.52798pt x 346.89601pt>
+
+<nr8_c_seed=0.4.pdf, id=103, 462.52798pt x 346.89601pt>
 File: nr8_c_seed=0.4.pdf Graphic file (type pdf)
 
 <use nr8_c_seed=0.4.pdf>
-Package luatex.def Info: nr8_c_seed=0.4.pdf used on input line 51.
+Package luatex.def Info: nr8_c_seed=0.4.pdf used on input line 59.
 (luatex.def)             Requested size: 334.60571pt x 250.96649pt.
-
-<nr8_c_seed=0.5.pdf, id=129, 462.52798pt x 346.89601pt>
+ [3<./nr8_c_seed=0.2.pdf><./nr8_c_seed=0.3.pdf>]
+<nr8_c_seed=0.5.pdf, id=150, 462.52798pt x 346.89601pt>
 File: nr8_c_seed=0.5.pdf Graphic file (type pdf)
 
 <use nr8_c_seed=0.5.pdf>
-Package luatex.def Info: nr8_c_seed=0.5.pdf used on input line 57.
+Package luatex.def Info: nr8_c_seed=0.5.pdf used on input line 65.
 (luatex.def)             Requested size: 334.60571pt x 250.96649pt.
- [4<./nr8_c_seed=0.3.pdf><./nr8_c_seed=0.4.pdf>]
-<nr8_c_seed=0.6.pdf, id=176, 462.52798pt x 346.89601pt>
+
+<nr8_c_seed=0.6.pdf, id=151, 462.52798pt x 346.89601pt>
 File: nr8_c_seed=0.6.pdf Graphic file (type pdf)
 
 <use nr8_c_seed=0.6.pdf>
-Package luatex.def Info: nr8_c_seed=0.6.pdf used on input line 63.
+Package luatex.def Info: nr8_c_seed=0.6.pdf used on input line 71.
 (luatex.def)             Requested size: 334.60571pt x 250.96649pt.
-
-<nr8_c_seed=0.7.pdf, id=177, 462.52798pt x 346.89601pt>
+ [4<./nr8_c_seed=0.4.pdf><./nr8_c_seed=0.5.pdf>]
+<nr8_c_seed=0.7.pdf, id=199, 462.52798pt x 346.89601pt>
 File: nr8_c_seed=0.7.pdf Graphic file (type pdf)
 
 <use nr8_c_seed=0.7.pdf>
-Package luatex.def Info: nr8_c_seed=0.7.pdf used on input line 69.
+Package luatex.def Info: nr8_c_seed=0.7.pdf used on input line 77.
 (luatex.def)             Requested size: 334.60571pt x 250.96649pt.
- [5<./nr8_c_seed=0.5.pdf><./nr8_c_seed=0.6.pdf>]
-<nr8_c_seed=0.8.pdf, id=225, 462.52798pt x 346.89601pt>
+
+<nr8_c_seed=0.8.pdf, id=200, 462.52798pt x 346.89601pt>
 File: nr8_c_seed=0.8.pdf Graphic file (type pdf)
 
 <use nr8_c_seed=0.8.pdf>
-Package luatex.def Info: nr8_c_seed=0.8.pdf used on input line 75.
+Package luatex.def Info: nr8_c_seed=0.8.pdf used on input line 83.
 (luatex.def)             Requested size: 334.60571pt x 250.96649pt.
-
-<nr8_c_seed=0.9.pdf, id=226, 462.52798pt x 346.89601pt>
+ [5<./nr8_c_seed=0.6.pdf><./nr8_c_seed=0.7.pdf>]
+<nr8_c_seed=0.9.pdf, id=247, 462.52798pt x 346.89601pt>
 File: nr8_c_seed=0.9.pdf Graphic file (type pdf)
 
 <use nr8_c_seed=0.9.pdf>
-Package luatex.def Info: nr8_c_seed=0.9.pdf used on input line 81.
+Package luatex.def Info: nr8_c_seed=0.9.pdf used on input line 89.
 (luatex.def)             Requested size: 334.60571pt x 250.96649pt.
- [6<./nr8_c_seed=0.7.pdf><./nr8_c_seed=0.8.pdf>]
-<nr8_d_2D_seed=0.2.pdf, id=273, 462.52798pt x 346.89601pt>
+
+<nr8_d_2D_seed=0.2.pdf, id=248, 462.52798pt x 346.89601pt>
 File: nr8_d_2D_seed=0.2.pdf Graphic file (type pdf)
 
 <use nr8_d_2D_seed=0.2.pdf>
-Package luatex.def Info: nr8_d_2D_seed=0.2.pdf used on input line 90.
+Package luatex.def Info: nr8_d_2D_seed=0.2.pdf used on input line 98.
 (luatex.def)             Requested size: 334.60571pt x 250.96649pt.
- [7<./nr8_c_seed=0.9.pdf>]
-<nr8_d_3D_seed=0.2.pdf, id=300, 462.52798pt x 346.89601pt>
+ [6<./nr8_c_seed=0.8.pdf><./nr8_c_seed=0.9.pdf>]
+<nr8_d_3D_seed=0.2.pdf, id=295, 462.52798pt x 346.89601pt>
 File: nr8_d_3D_seed=0.2.pdf Graphic file (type pdf)
 
 <use nr8_d_3D_seed=0.2.pdf>
-Package luatex.def Info: nr8_d_3D_seed=0.2.pdf used on input line 96.
+Package luatex.def Info: nr8_d_3D_seed=0.2.pdf used on input line 104.
 (luatex.def)             Requested size: 334.60571pt x 250.96649pt.
-
-<nr8_d_npuni_2D_seed=0.2.pdf, id=301, 462.52798pt x 346.89601pt>
+ [7<./nr8_d_2D_seed=0.2.pdf>]
+<nr8_d_npuni_2D_seed=0.2.pdf, id=321, 462.52798pt x 346.89601pt>
 File: nr8_d_npuni_2D_seed=0.2.pdf Graphic file (type pdf)
 
 <use nr8_d_npuni_2D_seed=0.2.pdf>
-Package luatex.def Info: nr8_d_npuni_2D_seed=0.2.pdf used on input line 104.
+Package luatex.def Info: nr8_d_npuni_2D_seed=0.2.pdf used on input line 110.
 (luatex.def)             Requested size: 334.60571pt x 250.96649pt.
- [8<./nr8_d_2D_seed=0.2.pdf><./nr8_d_3D_seed=0.2.pdf>] <nr8_d_npuni_3D_seed=0.2
-.pdf, id=345, 462.52798pt x 346.89601pt>
+
+<nr8_d_npuni_3D_seed=0.2.pdf, id=322, 462.52798pt x 346.89601pt>
 File: nr8_d_npuni_3D_seed=0.2.pdf Graphic file (type pdf)
 
 <use nr8_d_npuni_3D_seed=0.2.pdf>
-Package luatex.def Info: nr8_d_npuni_3D_seed=0.2.pdf used on input line 110.
+Package luatex.def Info: nr8_d_npuni_3D_seed=0.2.pdf used on input line 116.
 (luatex.def)             Requested size: 334.60571pt x 250.96649pt.
- [9<./nr8_d_npuni_2D_seed=0.2.pdf>]
-<nr8_f.pdf, id=372, 462.52798pt x 346.89601pt>
+ [8<./nr8_d_3D_seed=0.2.pdf><./nr8_d_npuni_2D_seed=0.2.pdf>] <nr8_f.pdf, id=366
+, 462.52798pt x 346.89601pt>
 File: nr8_f.pdf Graphic file (type pdf)
  <use nr8_f.pdf>
-Package luatex.def Info: nr8_f.pdf used on input line 125.
+Package luatex.def Info: nr8_f.pdf used on input line 140.
 (luatex.def)             Requested size: 334.60571pt x 250.96649pt.
- [10<./nr8_d_npuni_3D_seed=0.2.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 129.
- [11<./nr8_f.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 129.
+
+[9<./nr8_d_npuni_3D_seed=0.2.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 144.
+ [10<./nr8_f.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 144.
  (./build/Blatt2.aux
 Language ngerman already loaded; id is 8)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 129.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 129.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 144.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 144.
 Package rerunfilecheck Info: File `Blatt2.aux' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
 Package logreq Info: Writing requests to 'Blatt2.run.xml'.
@@ -2366,22 +2367,24 @@ Package logreq Info: Writing requests to 'Blatt2.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 41335 strings out of 494577
+ 41332 strings out of 494577
  100000,1648299 words of node,token memory allocated
- 973 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 52 glue, 1 kern, 41 attribute, 57 glue_spec, 41 att
+ 1016 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 57 glue, 1 kern, 43 attribute, 57 glue_spec, 43 att
 ribute_list, 1 write nodes
-   avail lists: 1:4,2:166,3:63,4:17,5:36,6:414,7:134,8:20,9:51,10:9,11:47
- 44193 multiletter control sequences out of 65536+600000
- 56 fonts using 11109127 bytes
- 61i,6n,104p,8835b,806s stack positions out of 5000i,500n,10000p,200000b,100000s
-<c:/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texl
-ive/2016/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/2
-016/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf>
-Output written on Blatt2.pdf (11 pages, 1403305 bytes).
+   avail lists: 1:4,2:164,3:66,4:21,5:65,6:814,7:202,8:20,9:53,10:9,11:100
+ 44192 multiletter control sequences out of 65536+600000
+ 56 fonts using 11109199 bytes
+ 61i,6n,104p,8835b,835s stack positions out of 5000i,500n,10000p,200000b,100000s
+<c:/texlive/2016/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf><
+c:/texlive/2016/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf><c
+:/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texliv
+e/2016/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/201
+6/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf>
+Output written on Blatt2.pdf (10 pages, 1404582 bytes).
 
-PDF statistics: 482 PDF objects out of 1000 (max. 8388607)
- 276 compressed objects within 3 object streams
- 35 named destinations out of 1000 (max. 131072)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+PDF statistics: 487 PDF objects out of 1000 (max. 8388607)
+ 275 compressed objects within 3 object streams
+ 33 named destinations out of 1000 (max. 131072)
+ 49 words of extra memory for PDF output out of 10000 (max. 10000000)
 

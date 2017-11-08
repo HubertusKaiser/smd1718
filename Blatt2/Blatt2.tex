@@ -8,12 +8,12 @@
 \subsection{a)}
 Für a werden ganzzahlige Werte von 1 bis 20 genutzt.
 Dabei zeigt sich, dass die Periodenlänge maximal wird für 
-a-1 teilbar durch 2 und 4. 
+a-1 teilbar durch 2 (Primfaktor von 1024) und 4. 
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{nr8_a.pdf}
-  \caption{Peridenlänge für b=3, m=1024}
+  \caption{Periodenlänge für b=3, m=1024}
   % \label{fig:501200}
 \end{figure}
 
@@ -22,6 +22,14 @@ a-1 teilbar durch 2 und 4.
 Ok, wird gemacht :)
 
 \subsection{c)}
+Die Histogramme sehen alle gleich aus.
+Allerdings werden abhängig vom Seed 625 unterschiedliche 
+Zahlen (entsprechend Periodenlänge 625) generiert, für genug Bins sollte 
+man daher einen Unterschied erkennen (Wird dann allerdings 
+schnell unübersichtlich.)
+(Mit pl=True bricht der RNG im Script 
+nach einer Periode ab.)
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{nr8_c_seed=0.0.pdf}
@@ -82,8 +90,8 @@ Ok, wird gemacht :)
   \caption{Histogramm für seed = 0.9}
 \end{figure}
 
-\subsection{d)}
-Exemplarisch für Anfangswert/Seed = 0.2:
+\subsection{d), e)}
+Exemplarisch für Seed = 0.2:
 
 \begin{figure}[H]
   \centering
@@ -96,8 +104,6 @@ Exemplarisch für Anfangswert/Seed = 0.2:
   \includegraphics[width=0.8\textwidth]{nr8_d_3D_seed=0.2.pdf}
   \caption{3D Histogramm mit konstruiertem RNG}
 \end{figure}
-
-\subsection{e)}
 
 \begin{figure}[H]
   \centering
@@ -113,7 +119,13 @@ Exemplarisch für Anfangswert/Seed = 0.2:
 
 
 Nein, ein guter Zufallsgenerator würde mehr Hyperebenen erzeugen.
-Bei 625 
+Bei 625 generierten Zahlen wären im 
+3D Histogramm bis zu $(625)^{1/3} \approx 8.5$ Ebenen
+möglich. (Stimmt das so? Die Formel tauchte bei Spektraltest
+irgendwo im Internet auf...)
+Bei Numpy.Uniform lassen sich sehr viel schlechter Strukturen erkennen, 
+wodurch dieser RNG deutlich besser als der linear kongruente mit 
+den gegebenen Parametern ist. 
 \subsection{f)}
 
 1/2 findet sich abhängig vom Seed 16mal oder 0mal
