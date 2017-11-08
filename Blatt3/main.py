@@ -1,9 +1,9 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from energy import phi_mc
-from energy import acceptance_mc
-from energy import hits_mc
+from RNGs import phi_mc
+from RNGs import acceptance_mc
+from RNGs import hits_mc
 
 N = 100
 uni = np.random.uniform(0, 1, N)
@@ -16,8 +16,8 @@ acceptance_mask = [(x>0) for x in diff]
 
 data['AcceptanceMask'] = acceptance_mask
 
-hits = hits_mc(E)
+hitsx, hitsy = hits_mc(E)
 
-data['NumberOfHits'] = hits
+data['NumberOfHits'] = hitsx
 
 print(data)
