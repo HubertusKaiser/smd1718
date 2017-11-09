@@ -13,13 +13,21 @@ def acceptance_mc(E):
 
 def hits_mc(E):
     return normal_polar(10*E, 2*E)
-    
 
-def position_mc(N):
-    sigma = 1
-    x,x_ = normal_polar(7, 1)
-    return([x,y])
-     
+
+def position_mc(N, mux, muy, sigma):
+    # sigma = N
+    x, x_ = normal_polar(mux, sigma)
+    y, y_ = normal_polar(muy, sigma)
+    for z in x:
+        if z>10:
+            z = normal_polar(7, sigma)
+    for z in y:
+        if z>10:
+            z = normal_polar(3, sigma)
+    return([x, y])
+
+
 def normal_polar(mu, sigma):
     inside = False
     while inside is False:
@@ -31,7 +39,7 @@ def normal_polar(mu, sigma):
         if s < 1:
             inside = True
     x1 = v1*np.sqrt(-2/s*np.log(s))
-    x2 = v2*np.sqrt(-2/s*np.log(s))  # Das sollten jetzt 2 normalverteilte ZZ sein?
+    x2 = v2*np.sqrt(-2/s*np.log(s))
     x_ms = sigma * x1 + sigma * x2 + mu
     y_ms = sigma*x2 + mu
     return [x_ms, y_ms]
