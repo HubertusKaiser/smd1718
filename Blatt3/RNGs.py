@@ -1,8 +1,8 @@
 import numpy as np
 
 
-def phi_mc(gamma, phi0, x):
-    inv = (1-x)**(1-gamma)
+def energy_mc(gamma, x):
+    inv = (1-x)**(1/(1-gamma))
     return inv
 
 
