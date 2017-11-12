@@ -12,23 +12,22 @@ def acceptance_mc(E):
 
 
 def hits_mc(E):
-    return normal_polar(10*E, 2*E)
+    return normal_polar(10*E, 10*E, 2*E, 2*E, 0)
 
 
-def position_mc(N, mux, muy, sigma):
-    # sigma = N
-    x, x_ = normal_polar(mux, sigma)
-    y, y_ = normal_polar(muy, sigma)
+def position_mc(mux, muy, sigmax, sigmay, rho):
+    x, y = normal_polar(mux, muy, sigmax, sigmay, rho)
+    # y, y_ = normal_polar(muy, sigma)
     for z in x:
-        if z>10:
-            z = normal_polar(7, sigma)
+        if z > 10:
+            x, y = normal_polar(mux, muy, sigmax, sigmay, rho)
     for z in y:
-        if z>10:
-            z = normal_polar(3, sigma)
+        if z > 10:
+            x, y = normal_polar(mux, muy, sigmax, sigmay, rho)
     return([x, y])
 
 
-def normal_polar(mu, sigma):
+def normal_polar(mux, muy, sigmax, sigmay, rho):
     inside = False
     while inside is False:
         u1 = np.random.uniform(0, 1, 1)
@@ -40,6 +39,6 @@ def normal_polar(mu, sigma):
             inside = True
     x1 = v1*np.sqrt(-2/s*np.log(s))
     x2 = v2*np.sqrt(-2/s*np.log(s))
-    x_ms = sigma * x1 + sigma * x2 + mu
-    y_ms = sigma*x2 + mu
+    x_ms = np.sqrt(1-rho**2)*sigmax * x1 + rho*sigmay * x2 + mux
+    y_ms = sigmay*x2 + muy
     return [x_ms, y_ms]
