@@ -1,0 +1,50 @@
+\section{Aufgabe19:}
+\subsection{a}
+Wenn die Attribute sich stark in ihren Größenordnungen unterscheiden,
+sollte k nicht zu groß gewählt werden, da sonst einzelne 
+"falsch" zugeordnete Elemente die Zuweisung für den untersuchten Kandidaten dominieren.
+
+\subsection{b}
+k-NN wird als "Lazy Learner" bezeichnet, weil die Generalisierung der 
+Trainingsdaten erst mit der Untersuchung der Datenpunkte stattfindet.
+Anstatt die Trainingsdaten direkt zu generalisieren, werden diese 
+ausgewertet wenn die Umgebung eines Datenpunktes angeschaut wird.
+Dadurch wird die Verteilung lokal approximiert, was 
+dazu führt, dass die Tariningsdaten für jeden dieser Schritte 
+verglichen werden müssen. 
+
+\subsection{d}
+
+\begin{table}
+\centering
+\caption{Vergleich der Reinheiten}
+\begin{tabular}{c c} \toprule
+  Reinheit mit Anzahl der Hits& Reinheit mit log10(Anzahl der Hits) &
+  Reinheit mit x & Reinheit mit y \\
+0.2899& 
+0.3157&
+0.3451&
+0.3370\\
+   \bottomrule
+ \end{tabular}
+\end{table}
+
+
+\begin{table}
+\centering
+\caption{Vergleich der Effizienzen}
+\begin{tabular}{c c} \toprule
+  Effizienz mit Anzahl der Hits& Effizienz mit log10(Anzahl der Hits) &
+  Effizienz mit x & Effizienz mit y \\
+0.0556&
+0.0501&
+0.0725&
+0.0708&
+   \bottomrule
+ \end{tabular}
+\end{table}
+
+Die Klassifikation über die Positionen scheint besser zu funktionieren als die 
+über die Anzahl der Hits im Detektor.
+Mit den logarithmischen Hits verbessert sich die Reinheit leicht auf 
+Kosten der Effizienz, es werden also weniger Ereignisse als Signal detektiert.

@@ -3,11 +3,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 def aufg19():
-    print("""Die Anzahl der nächsten Nachbarn, k, 
-          hat einen großen Einfluss auf das Ergebnis des
-          Algorithmus. Für große k sinkt die Varianz, aber
-          gleichzeitig steigt der Bias. Wenn die Attribute 
-          sich stark unterscheiden, führt ein zu hohes k zu...""")
+
     
     def kNN(sample, label_sample, data, k):
         label_data = np.zeros(len(data))
