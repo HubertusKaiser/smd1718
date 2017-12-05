@@ -22,8 +22,8 @@ def aufg19():
     def calc_statvalues(tp, tn, fp, fn):
         reinheit = tp/(tp+fp)
         effizienz = tp/(tp+fn)
-        # signifikanz = ?
-        return reinheit, effizienz
+        signifikanz = tp/np.sqrt(tp+fp)
+        return reinheit, effizienz, signifikanz
         
     def countlabels(label_true, label_kNN):
         msk = label_true==label_kNN
@@ -43,11 +43,11 @@ def aufg19():
     
     train_bkg, test_bkg = train_test_split(neutrino_knn_bkg,
                                            train_size= 5000,
-                                           test_size = 20000)
+                                           test_size = 20000, random_state=42)
 
     train_sig, test_sig = train_test_split(neutrino_knn_sig,
                                            train_size= 5000,
-                                           test_size = 10000)     
+                                           test_size = 10000, random_state=42)     
             
     train_sig['label'] = 1  # wirft eine Warnung weil ein wert statt array, aber scheint zu gehen
     train_bkg['label'] = 0
@@ -62,7 +62,7 @@ def aufg19():
                            10)
   
     tp_nh, tn_nh, fp_nh, fn_nh = countlabels(test_ges['label'].values, label_numberhits)
-    reinheit_nh, effizienz_nh = calc_statvalues(tp_nh, tn_nh, fp_nh, fn_nh)
+    reinheit_nh, effizienz_nh, signifikanz_nh = calc_statvalues(tp_nh, tn_nh, fp_nh, fn_nh)
 
     
     
@@ -72,7 +72,7 @@ def aufg19():
                            10)
   
     tp_lnh, tn_lnh, fp_lnh, fn_lnh = countlabels(test_ges['label'].values, label_lognumberhits)
-    reinheit_lnh, effizienz_lnh = calc_statvalues(tp_lnh, tn_lnh, fp_lnh, fn_lnh)
+    reinheit_lnh, effizienz_lnh, signifikanz_lnh = calc_statvalues(tp_lnh, tn_lnh, fp_lnh, fn_lnh)
             
 
             
@@ -82,7 +82,7 @@ def aufg19():
                            10)
                            
     tp_x, tn_x, fp_x, fn_x = countlabels(test_ges['label'].values, label_x)
-    reinheit_x, effizienz_x = calc_statvalues(tp_x, tn_x, fp_x, fn_x)
+    reinheit_x, effizienz_x, signifikanz_x = calc_statvalues(tp_x, tn_x, fp_x, fn_x)
     
     
     
@@ -92,20 +92,27 @@ def aufg19():
                            10)
                            
     tp_y, tn_y, fp_y, fn_y = countlabels(test_ges['label'].values, label_y)
-    reinheit_y, effizienz_y = calc_statvalues(tp_y, tn_y, fp_y, fn_y)
+    reinheit_y, effizienz_y, signifikanz_y = calc_statvalues(tp_y, tn_y, fp_y, fn_y)
     
-    print('Reinheiten')
-    print(reinheit_nh)
-    print(reinheit_lnh)
-    print(reinheit_x)
-    print(reinheit_y)
     
-    print('Effizienzen')
-    print(effizienz_nh)
-    print(effizienz_lnh)
-    print(effizienz_x)
-    print(effizienz_y)
+    print('Reinheiten:')
+    print('NumberofHits:', reinheit_nh)
+    print('log10(NumberofHits):', reinheit_lnh)
+    print('x:', reinheit_x)
+    print('y:', reinheit_y)
+    
+    print('Effizienzen:')
+    print('NumberofHits:', effizienz_nh)
+    print('log10(NumberofHits):', effizienz_lnh)
+    print('x:', effizienz_x)
+    print('y:', effizienz_y)
 
+    
+    print('Signifikanzen:')
+    print('NumberofHits:', signifikanz_nh)
+    print('log10(NumberofHits):', signifikanz_lnh)
+    print('x:', signifikanz_x)
+    print('y:', signifikanz_y)
 
     
 if __name__ == "__main__":
