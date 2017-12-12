@@ -5,7 +5,7 @@ import scipy.stats as scs
 
 
 class MCMC(object):
-    def __init__(self, step_size=1., loc=0., scale=1.):
+    def __init__(self, step_size=1., loc=0., scale=1., pdf):
         """
         Sample from a 1D gaussian PDF with uniform step proposal.
 
@@ -18,7 +18,7 @@ class MCMC(object):
             the next one from a uniform PDF in ``[-step_size, step_size]``.
         """
         self.step_size = step_size
-        self._pdf = scs.norm(loc, scale).pdf
+        self._pdf = pdf
         self.loc = loc
         self.scale = scale
         
