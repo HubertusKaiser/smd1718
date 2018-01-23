@@ -1,0 +1,56 @@
+\section{Aufgabe 32}
+
+Wir starten mit der Likelihood-Funktion
+
+\begin{equation}
+	\ln L = (N_{off}) \ln (b) + N_{on} \ln (s) +\alpha b -(1+\alpha) b - s - \ln (N_{off}!) - \ln (N_{on}!)
+	\label{eq:loglikelihood_32}
+\end{equation}
+
+a) Nullhypothese: $s_0$=0. Damit wird \eqref{eq:loglikelihood_32} zu :
+\begin{equation}
+	\ln L = N_{off} \ln (b) + N_{on} \ln (\alpha b) -(1+\alpha) b - \ln N_{off}! - \ln N_{on}!
+\end{equation}
+$b_0$ erlangt man durch differenzieren:
+
+\begin{equation}
+	\frac{\partial}{\partial b} \ln (L) = \frac{N_{off}}{b_0} + \frac{N_{on}}{b_0} -(1+\alpha) = 0
+\end{equation}
+
+\begin{equation}
+	\rightarrow b_0 = \frac{N_{off} + N_{on}}{1+\alpha}.
+\end{equation}
+
+Der Fehler von $b_0$ kommt aus der zweiten Ableitung der loglikelihood:
+\begin{equation}
+	\frac{\partial^2}{\partial^2 b} \ln (L) = -\frac{N_{off} + N_{on}}{b_0^2} = \sigma^2_{b_0}
+\end{equation}
+\begin{equation}
+	\rightarrow \sigma_{b_0}^2 = -\frac{(1-\alpha)^2}{N_{off} + N_{on}}. 
+\end{equation}
+
+
+
+b) Verhältnis der beiden Likelihoods aufstellen ($\lambda=\frac{L_0}{\hat{L}}$)
+
+\begin{align}
+	\lambda &= \exp{(\ln (L_0/\hat{L}))} = \exp{(\ln L_0 - \ln \hat L)} \\
+	&= ... = b_0^{N_{on}+N_{off}}\alpha^{N_{on}} \hat{b}^{-N_{off}} (\hat{s} + \alpha\hat{b})^{-N_{on}} \exp{((1+\alpha)(\hat{b}-b_0))} \exp{\hat{s}}
+\end{align}
+
+
+c) $D = -2\ln \lambda$ ist $\chi^2$ verteilt mit einem Freiheitsgrad
+
+d) 
+
+\begin{align}
+	b_{0,1} &= \frac{120+160}{1+0.6} = 175 \\
+	\sigma_{1} &= -\frac{1+\alpha}{b_0} = \frac{1.6}{175} = 0.0091 \\
+	D_1 &= -1888,12
+\end{align}
+
+\begin{align}
+	b_{0,2} &= \frac{150+320}{1+0.3} = 361.5385 \\
+	\sigma_{2} &= -\frac{1+\alpha}{b_0} = \frac{1.3}{361.5385} = 0.0036 \\
+	D_2 &= -18011,8
+\end{align}
